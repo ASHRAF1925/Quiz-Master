@@ -16,6 +16,10 @@ const router=createBrowserRouter ([
       children:[
         {
           path:'/',
+          loader:async () =>{
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+
+          },
           element:<Topics></Topics>
         },
 
@@ -26,12 +30,13 @@ const router=createBrowserRouter ([
         {
           path:'/blogs',
           element:<Blogs></Blogs>
-        },
-        {
-          path:'*',
-          element:<NotFoundPage></NotFoundPage>
         }
+        
       ]
+    }
+    ,{
+      path:'*',
+      element:<NotFoundPage></NotFoundPage>
     }
   ])
   return (
