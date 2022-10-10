@@ -7,12 +7,31 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navigationbar = () => {
     return (
-        <Navbar bg="light" expand="lg">
-          <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar bg="primary" expand="lg" >
+         
+         <div className='d-flex  me-auto container'>
+        
+          <div>
+            <Navbar.Brand href="#home">
+            <img
+              src="images/logo.png"
+              width="80"
+              height="80"
+              className="d-inline-block align-top"
+              alt=""
+            />
+          </Navbar.Brand>
+          
+          
+          </div>
+          <Navbar.Brand href="/" className=''>Quiz? Master</Navbar.Brand>
+       
+     
+                     
+          
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="ms-auto ">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -28,7 +47,12 @@ const Navigationbar = () => {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
-          </Container>
+          
+        
+
+       
+        
+         </div>
        
   
        
