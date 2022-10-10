@@ -6,6 +6,7 @@ import Statistics from './Components/Statistics/Statistics';
 import Topics from './Components/Topics/Topics';
 
 import Main from './layouts/Main';
+import Questions from './Questions/Questions';
 
 function App() {
 
@@ -30,6 +31,10 @@ const router=createBrowserRouter ([
         {
           path:'/blogs',
           element:<Blogs></Blogs>
+        },
+        {
+          path:'/topics/:topicID',
+          element:<Questions></Questions>
         }
         
       ]
