@@ -9,7 +9,7 @@ import './Navigationbar.css'
 
 const Navigationbar = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" id='backgroundColor'>
       <div className="d-flex  me-auto container">
         <div>
           <Navbar.Brand href="#home">

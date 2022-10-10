@@ -10,3 +10,7 @@
     font-weight: 900;
     
 }
+#backgroundColor{
+    background-color: rgba(135, 223, 243, 0.648);
+    border-radius: 30px;
+}
