@@ -9,7 +9,7 @@ const Questions = () => {
     const allquestions=useLoaderData();
   
     const{total,id,name,logo,questions}=allquestions.data;
-    console.log(typeof(questions));
+    // console.log(typeof(questions));
     return (
         <div>
             <h1>Welcome to the Quiz of  {name}</h1>

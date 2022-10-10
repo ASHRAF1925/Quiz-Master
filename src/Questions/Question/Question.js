@@ -1,9 +1,16 @@
 import React from 'react';
 
-const Question = () => {
+const Question = (questions) => {
+    console.log(questions.children[3].options)
     return (
         <div>
-            <h1>Hello</h1>
+            <h1>{questions.children[3].question}</h1>
+            <br />
+            <br />
+            {
+                 questions.children[3].options.map(option=> <p>{option}</p>)
+
+            }
         </div>
     );
 };
