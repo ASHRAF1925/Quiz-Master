@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay} from '@fortawesome/free-solid-svg-icons'
 
 const TopicDetails = ({topic}) => {
     const{name,logo,total}=topic;
@@ -17,7 +19,7 @@ const TopicDetails = ({topic}) => {
           
 
         
-          <Button variant="primary">Start The Quiz</Button>
+          <Button variant="primary">Start The Quiz  <small className='ms-2'><FontAwesomeIcon icon={faPlay} ></FontAwesomeIcon></small> </Button>
         </Card.Body>
       </Card>
     );
