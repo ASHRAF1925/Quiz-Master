@@ -1,12 +1,15 @@
 import React from 'react';
+import { Outlet } from 'react-router';
 import Header from '../Components/Header/Header';
-import Navbar from '../Components/Navbar/Navbar';
+import Navigationbar from '../Components/Navigationbar/Navigationbar';
+
 
 const Main = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <Navigationbar></Navigationbar>
             <Header></Header>
+            <Outlet></Outlet>
         </div>
     );
 };
