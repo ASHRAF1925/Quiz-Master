@@ -1,18 +1,18 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
+import React from "react";
+import { Container } from "react-bootstrap";
 
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
+import './Navigationbar.css'
 
 const Navigationbar = () => {
-    return (
-        <Navbar bg="primary" expand="lg" >
-         
-         <div className='d-flex  me-auto container'>
-        
-          <div>
-            <Navbar.Brand href="#home">
+  return (
+    <Navbar bg="light" expand="lg">
+      <div className="d-flex  me-auto container">
+        <div>
+          <Navbar.Brand href="#home">
             <img
               src="images/logo.png"
               width="80"
@@ -21,44 +21,30 @@ const Navigationbar = () => {
               alt=""
             />
           </Navbar.Brand>
-          
-          
-          </div>
-          <Navbar.Brand href="/" className=''>Quiz? Master</Navbar.Brand>
-       
-     
-                     
-          
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto ">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-          
-        
+        </div>
+        <Navbar.Brand href="/"  className="title">
+          Quiz? Master
+        </Navbar.Brand>
 
-       
-        
-         </div>
-       
-  
-       
- 
-      </Navbar>
-    );
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav variant="pills" defaultActiveKey="/" className="ms-auto">
+          <Nav.Item>
+              <Nav.Link eventKey="/"><Link to='/' className="noDecoration"> Topics</Link></Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="/statistics"><Link to='/statistics' className="noDecoration"> Statistics</Link></Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="/blogs"><Link to='/blogs' className="noDecoration"> Blogs</Link></Nav.Link>
+            </Nav.Item>
+            
+            
+          </Nav>
+        </Navbar.Collapse>
+      </div>
+    </Navbar>
+  );
 };
 
 export default Navigationbar;
