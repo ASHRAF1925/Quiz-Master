@@ -1,0 +1,10 @@
+.option-box{
+    background-color: bisque;
+    margin: auto;
+   width: 20rem;
+   padding:50px 0px;
+   border-radius: 50px;
+}
+.option-box:hover{
+    background-color: burlywood;
+}

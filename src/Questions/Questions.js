@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Question from './Question/Question';
+import Question from '../Question/Question';
 const Questions = () => {
     const allquestions=useLoaderData();
   
@@ -21,9 +21,13 @@ const Questions = () => {
           <Col lg={12} >
             <Row>
             { 
-                questions.map(question=><Question>
-                    key={question.id},
-                    Question={question}
+                questions.map((question,index)=>
+                    // console.log(index);
+                
+                <Question>
+                    key={index},
+                    Question={question},
+                    
                 </Question>)
             }
             </Row>

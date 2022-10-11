@@ -6,6 +6,7 @@ import Topic from '../Topic/Topic';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Header from '../Header/Header';
 
 const Topics = () => {
     const topics=useLoaderData();
@@ -13,6 +14,8 @@ const Topics = () => {
    
     return (
         <div>
+            
+            <Header></Header>
             <h1>Select Your Favourite Topic</h1>
             <Container>
         <Row>
