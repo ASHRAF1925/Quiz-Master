@@ -10,7 +10,7 @@ import Header from '../Header/Header';
 
 const Topics = () => {
     const topics=useLoaderData();
-  
+   
  
    
     return (

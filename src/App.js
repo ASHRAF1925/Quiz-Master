@@ -3,7 +3,7 @@ import './App.css';
 import Blogs from './Components/Blogs/Blogs';
 import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
 import Statistics from './Components/Statistics/Statistics';
-import Topics from './Components/Topics/Topics';
+import  Topics  from './Components/Topics/Topics';
 
 import Main from './layouts/Main';
 import Questions from './Questions/Questions';
