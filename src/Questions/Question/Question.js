@@ -1,10 +1,12 @@
 import React from 'react';
+import { Substring } from '../../Utilities/Substring';
 
 const Question = (questions) => {
     console.log(questions.children[3].options)
+    const question_text=Substring(questions.children[3].question);
     return (
         <div>
-            <h1>{questions.children[3].question}</h1>
+            <h1>{question_text}</h1>
             <br />
             <br />
             {

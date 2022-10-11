@@ -12,7 +12,7 @@ const Navigationbar = () => {
     <Navbar expand="lg" id='backgroundColor'>
       <div className="d-flex  me-auto container">
         <div>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               src="images/logo.png"
               width="80"
