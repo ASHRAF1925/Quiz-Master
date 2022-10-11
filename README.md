@@ -1,9 +1,12 @@
-###Website-Name : Quiz-Master
+# Quiz Master
 
+Quiz Master is an **Quiz website** where you can fin quizes for many topics
 
-###Live-Website Link : 
+Quiz master Live Website Link :
 
-###Main-Features
-*Questions on Different TOpics
-*Dynamic route
-*Data  loaded from Api
+All the features are :
+- React Route is used
+- Dynamic Route is present
+- Data is loaded From API
+- Nice User Interface
+
