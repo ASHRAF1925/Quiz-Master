@@ -6,6 +6,8 @@ import Col from "react-bootstrap/Col";
 import './Question.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 
 const Question = (questions) => {
@@ -18,7 +20,7 @@ const Question = (questions) => {
               
     if(selected_answer===correct_answer)
     {
-      toast.success("Congratulations.You have Completed the Plan Successfully!",{position:"top-center"},{position:"top-center"});
+      toast.success("Congratulations.You have Selected the Correct Answer!",{position:"top-center"},{position:"top-center"});
       
 
     }
@@ -30,11 +32,21 @@ const Question = (questions) => {
     }
   }
 
+  const correctAnswer=(correct_answer)=>{
+    toast.success(correct_answer,{position:"top-center"});
+  }
+
   const question_text = Substring(questions.children[3].question);
 
   return (
     <div className="bg-light mt-5 p-5 container">
-      <h1>
+      <div className="position-relative">
+      <FontAwesomeIcon onClick={()=>correctAnswer(questions.children[3].correctAnswer)} className="position-absolute top-0 end-0 h1 ms-2" icon={faEye}/>
+      <ToastContainer autoClose={1000} />
+
+      </div>
+      
+      <h1 className="mx-5">
         Question:{questions.children[1] + 1} {question_text}
       </h1>
 
@@ -45,7 +57,7 @@ const Question = (questions) => {
               <input type="radio" id={option} name={questions.children[1] + 1}value={option} />
               
               
-              <label for={option} onClick={()=>checkanswer(questions.children[3].correctAnswer,option)}><div className="mx-4 option-box">{option}</div></label>
+              <label for={option}  onClick={()=>checkanswer(questions.children[3].correctAnswer,option)}><div className="mx-4 option-box ">{option}</div></label>
               <ToastContainer autoClose={1000} />
               
 
