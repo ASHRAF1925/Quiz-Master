@@ -11,7 +11,7 @@ const Questions = () => {
   const { total, id, name, logo, questions } = allquestions.data;
 
   return (
-    <div>
+    <div className="container">
       <h1>Welcome to the Quiz of {name}</h1>
       <Card.Img
         style={{ width: "18rem" }}

@@ -7,7 +7,7 @@ import Navigationbar from '../Components/Navigationbar/Navigationbar';
 
 const Main = () => {
     return (
-        <div>
+        <div className='container'>
              <Navigationbar></Navigationbar>
             <Container>
            

@@ -1,9 +1,7 @@
 .option-box{
     background-color: bisque;
-    margin: auto;
-
-   padding:50px;
-   border-radius: 10px;
+   height: 100%;
+   width: 50%;
 }
 .option-box:hover{
     background-color: burlywood;

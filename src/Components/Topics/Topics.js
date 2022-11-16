@@ -20,7 +20,7 @@ const Topics = () => {
             <h1>Select Your Favourite Topic</h1>
             <Container>
         <Row>
-          <Col lg={12} className="bg-primary">
+          <Col lg={12} className="bg-primary container">
             <Row>
             { 
                 topics.data.map(topic=><Topic>
